@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Nunito",
         brightness: Brightness.light,
         backgroundColor: Color.fromRGBO(250, 250, 250, 1.0),
-        primaryColor: Colors.redAccent,
+        primaryColor: Colors.red,
       ),
       home: Dashboard()
     );
