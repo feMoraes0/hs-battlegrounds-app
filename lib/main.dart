@@ -16,6 +16,12 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color.fromRGBO(250, 250, 250, 1.0),
         primaryColor: Colors.red,
       ),
+      darkTheme: ThemeData(
+        fontFamily: "Nunito",
+        brightness: Brightness.dark,
+        backgroundColor: Color.fromRGBO(48, 48, 48, 1.0),
+        primaryColor: Colors.redAccent,
+      ),
       home: Dashboard()
     );
   }
