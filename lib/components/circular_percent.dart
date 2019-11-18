@@ -3,13 +3,14 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class CircularPercent extends StatelessWidget {
   final double size, percent;
-  final Color primaryColor;
+  final Color primaryColor, secondaryColor;
   final String mainText, labelText;
 
   CircularPercent({
     @required this.size,
     @required this.percent,
     @required this.primaryColor,
+    @required this.secondaryColor,
     @required this.mainText,
     @required this.labelText,
   });
@@ -41,7 +42,7 @@ class CircularPercent extends StatelessWidget {
         ],
       ),
       circularStrokeCap: CircularStrokeCap.round,
-      backgroundColor: Colors.grey[200],
+      backgroundColor: this.secondaryColor,
       progressColor: this.primaryColor,
     );
   }

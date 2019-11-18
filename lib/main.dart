@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: "Nunito",
         brightness: Brightness.light,
         backgroundColor: Color.fromRGBO(250, 250, 250, 1.0),
+        disabledColor: Colors.grey[200],
         primaryColor: Colors.red,
       ),
       darkTheme: ThemeData(
@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         backgroundColor: Color.fromRGBO(48, 48, 48, 1.0),
         primaryColor: Colors.redAccent,
+        disabledColor: Color.fromRGBO(255, 255, 255, 0.1),
       ),
       home: Dashboard()
     );
