@@ -29,15 +29,14 @@ class Dashboard extends StatelessWidget {
                     mainText: "10",
                     labelText: "Games",
                   ),
-                  
                   CircularPercent(
-                      size: size.width / 2 - 40,
-                      percent: 0.6,
-                      primaryColor: primaryColor,
-                      secondaryColor: disabledColor,
-                      mainText: "6",
-                      labelText: "Top #1",
-                    ),
+                    size: size.width / 2 - 40,
+                    percent: 0.6,
+                    primaryColor: primaryColor,
+                    secondaryColor: disabledColor,
+                    mainText: "6",
+                    labelText: "Top #1",
+                  ),
                 ],
               ),
               Container(
@@ -54,45 +53,50 @@ class Dashboard extends StatelessWidget {
                       labelText: "Top #4",
                     ),
                     CircularPercent(
-                    size: size.width / 2 - 40,
-                    percent: 1.0,
-                    primaryColor: primaryColor,
-                    secondaryColor: disabledColor,
-                    mainText: "5000",
-                    labelText: "Points",
-                  ),
+                      size: size.width / 2 - 40,
+                      percent: 1.0,
+                      primaryColor: primaryColor,
+                      secondaryColor: disabledColor,
+                      mainText: "5000",
+                      labelText: "Points",
+                    ),
                   ],
                 ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: size.width - 40,
-                    padding: const EdgeInsets.all(10.0),
-                    margin: const EdgeInsets.only(top: 20.0),
-                    decoration: BoxDecoration(
-                      color: disabledColor,
-                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Image(
-                          image: AssetImage("assets/images/heroes.png"), 
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            "Hero Analytics",
-                            style: TextStyle(
-                              fontSize: 24.0,
-                              color: Colors.grey[500],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/analytics");
+                    },
+                    child: Container(
+                      width: size.width - 40,
+                      padding: const EdgeInsets.all(10.0),
+                      margin: const EdgeInsets.only(top: 20.0),
+                      decoration: BoxDecoration(
+                        color: disabledColor,
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image(
+                            image: AssetImage("assets/images/heroes.png"),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              "Hero Analytics",
+                              style: TextStyle(
+                                fontSize: 24.0,
+                                color: Colors.grey[500],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   )
                 ],

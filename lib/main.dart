@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:battlegrounds/analytics/analytics.dart';
 import 'package:battlegrounds/dashboard/dashboard.dart';
 
 void main() => runApp(MyApp());
@@ -9,6 +10,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        "/dashboard": (context) => Dashboard(),
+        "/analytics": (context) => Analytics(),
+      },
       theme: ThemeData(
         fontFamily: "Nunito",
         brightness: Brightness.light,
