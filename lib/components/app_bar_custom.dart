@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 class AppBarCustom extends StatelessWidget {
-  String text;
+  final String text;
 
   AppBarCustom({@required this.text});
 
