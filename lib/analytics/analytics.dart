@@ -35,13 +35,14 @@ class Analytics extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.grey[850],
+                  color: Colors.grey[500],
                 ),
               ),
             ),
             Container(
               width: size.width,
-              margin: const EdgeInsets.only(top: 30.0),
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.only(top: 40.0),
               child: ChartCustom(),
             )
           ],
