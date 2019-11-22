@@ -1,6 +1,6 @@
+import 'package:battlegrounds/analytics/bottom_sheet_custom.dart';
 import 'package:battlegrounds/components/app_bar_custom.dart';
 import 'package:battlegrounds/components/chart_custom.dart';
-import 'package:fl_chart/fl_chart.dart';
 import "package:flutter/material.dart";
 
 class Analytics extends StatelessWidget {
@@ -49,11 +49,23 @@ class Analytics extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Theme.of(context).primaryColor,
-        child: Icon(Icons.apps),
-      ),
+      floatingActionButton: FloatingButton(),
+    );
+  }
+}
+
+class FloatingButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: () {
+        showBottomSheet(
+          context: context,
+          builder: (BuildContext context) => BottomSheetCustom(),
+        );
+      },
+      backgroundColor: Theme.of(context).primaryColor,
+      child: Icon(Icons.apps),
     );
   }
 }
