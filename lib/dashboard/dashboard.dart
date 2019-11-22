@@ -105,11 +105,6 @@ class Dashboard extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Theme.of(context).primaryColor,
-        child: Icon(Icons.add, size: 30.0),
-      ),
     );
   }
 }
