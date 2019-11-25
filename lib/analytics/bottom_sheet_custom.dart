@@ -2,10 +2,6 @@ import "package:flutter/material.dart";
 
 class BottomSheetCustom extends StatelessWidget {
   final List<Map<String, String>> listHeroes = [
-    
-    
-    
-    
     {"name": "A. F. Kay", "image": "assets/images/heroes/a_f_kay.png"},
     {"name": "Bartendotron", "image": "assets/images/heroes/bartendotron.png"},
     {"name": "Bran", "image": "assets/images/heroes/bran_bronzebeard.png"},
